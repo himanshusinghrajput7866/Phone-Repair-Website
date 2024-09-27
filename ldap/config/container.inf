@@ -1,0 +1,8 @@
+
+[localhost]
+# Note that '/' is replaced to '%%2f' for ldapi url format.
+# So this is pointing to /data/run/slapd-localhost.socket
+uri = ldapi://%%2fdata%%2frun%%2fslapd-localhost.socket
+binddn = cn=Directory Manager
+# Set your basedn here
+# basedn = dc=example,dc=com

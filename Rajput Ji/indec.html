@@ -4,8 +4,49 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Repair Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-image {
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .service-image p {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -17,14 +58,13 @@
             <img src="Mobile Repairing Logo Hd, HD Png Download - vhv.jpeg" alt="Mobile Repair Logo">
         </div>
         <ul>
-            <li><a class="z" href="#">HOME</a></li>
+            <li><a class="active" href="#">HOME</a></li>
             <li><a href="#about-us">ABOUT US</a></li>
             <li><a href="#SERVICES">MOBILE SERVICES</a></li>
             <li><a href="#contact">CONTACT</a></li>
-            <li><a href="#HELP">HELP</a></li>
+            <li><a href="#HELP">HELP</a></li> <!-- Improved Help Section -->
         </ul>
     </nav>
-
     <header>
         <div class="header-content">
             <h1>Repair Your Smartphone Now</h1>
@@ -36,10 +76,10 @@
             <h3>About Us</h3>
             <div class="line"></div>
             <h2>Expert Mobile Repair Services</h2>
-            <h5>At <strong>[Smartphone repair]</strong>, we understand how essential your smartphone is in your daily life. Whether it's a cracked screen, battery issues, or water damage, our expert technicians are here to provide fast and reliable repair services. We use high-quality parts and advanced tools to ensure your phone gets back to working perfectly in no time.</h5>
+            <p>At <strong>[Smartphone repair]</strong>, we understand how essential your smartphone is in your daily life. Whether it's a cracked screen, battery issues, or water damage, our expert technicians are here to provide fast and reliable repair services. We use high-quality parts and advanced tools to ensure your phone gets back to working perfectly in no time.</p>
 
             <h2>Customer-Centric Approach</h2>
-            <h5>We believe in delivering more than just repairs — we provide a service that’s built around you. Our customer-first philosophy means transparency in pricing, quick turnaround times, and a focus on customer satisfaction. We value your trust and strive to build long-lasting relationships by providing the best repair experience possible.</h5>
+            <p>We believe in delivering more than just repairs — we provide a service that’s built around you. Our customer-first philosophy means transparency in pricing, quick turnaround times, and a focus on customer satisfaction. We value your trust and strive to build long-lasting relationships by providing the best repair experience possible.</p>
 
             <h2>Why Choose Us?</h2>
             <ul>
@@ -50,7 +90,7 @@
             </ul>
 
             <h2>Your One-Stop Repair Solution</h2>
-            <h5>From screen replacements to software issues, we handle everything with care and precision. Trust <strong>[Smartphone Repair]</strong> to keep your phone in top condition. Book an appointment today or walk into our store, and we'll make sure your device gets the best service it deserves.</h5>
+            <p>From screen replacements to software issues, we handle everything with care and precision. Trust <strong>[Your Business Name]</strong> to keep your phone in top condition. Book an appointment today or walk into our store, and we'll make sure your device gets the best service it deserves.</p>
         </div>
     </section>
 
@@ -60,46 +100,46 @@
             <div class="line"></div>
             <div class="services-grid">
                 <div class="service-image">
-                    <img src="back panal.jpg" alt="Replace Back Panel" style="height: 345px;">
-                    <p>Replace Back Panel</p>
+                    <img src="back panal.jpg" alt="Mobile Repair 1" style="height: 345px;">
+                    <p style="font-size: 30px;">Replace Back Panel</p>
                 </div>
                 <div class="service-image">
-                    <img src="Cpu Repair.jpeg" alt="CPU Repair" style="height: 340px;">
-                    <p>CPU Repair</p>
+                    <img src="Cpu Repair.jpeg" alt="Mobile Repair 2" style="height: 340px;">
+                    <p style="font-size: 30px;">CPU Repair</p>
                 </div>
                 <div class="service-image">
-                    <img src="charging jack repair.jpg" alt="Charging Jack Repair" style="height: 340px;">
-                    <p>Charging Jack Repair</p>
+                    <img src="charging jack repair.jpg" alt="Mobile Repair 3" style="height: 340px;">
+                    <p style="font-size: 30px;">Charging Jack Repair</p>
                 </div>
                 <div class="service-image">
-                    <img src="Display repair.jpg" alt="Display Repair" style="height: 340px;">
-                    <p>Display Repair</p>
+                    <img src="Display repair.jpg" alt="Mobile Repair 4" style="height: 340px;">
+                    <p style="font-size: 30px;">Display Repair</p>
                 </div>
                 <div class="service-image">
-                    <img src="battery repair.png" alt="Battery Replace">
-                    <p>Battery Replace</p>
+                    <img src="battery repair.png" alt="Mobile Repair 5">
+                    <p style="font-size: 30px;">Battery Replace</p>
                 </div>
                 <div class="service-image">
-                    <img src="Camerarepair.jpg" alt="Camera Repair" style="height: 340px;">
-                    <p>Camera Repair</p>
+                    <img src="Camerarepair.jpg" alt="Mobile Repair 6" style="height: 340px;">
+                    <p style="font-size: 30px;">Camera Repair</p>
                 </div>
                 <div class="service-image">
-                    <img src="Mick Repair.jpeg" alt="Mic Repair" style="height: 340px;">
-                    <p>Mic Repair</p>
+                    <img src="Mick Repair.jpeg" alt="Mobile Repair 7" style="height: 340px;">
+                    <p style="font-size: 30px;">Mic Repair</p>
                 </div>
                 <div class="service-image">
-                    <img src="Speaker Repair.jpeg" alt="Speaker Repair" style="height: 340px;">
-                    <p>Speaker Repair</p>
+                    <img src="Speaker Repair.jpeg" alt="Mobile Repair 8" style="height: 340px;">
+                    <p style="font-size: 30px;">Speaker Repair</p>
                 </div>
                 <div class="service-image">
-                    <img src="Network Problem .jpg" alt="Fix Network Problem" style="height: 340px;">
-                    <p>Fix Network Problem</p>
+                    <img src="Network Problem .jpg" alt="Mobile Repair 9" style="height: 340px;">
+                    <p style="font-size: 30px;">Fix Network Problem</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contact1" id="contact">
+    <section class="contact" id="contact">
         <h1>Mobile Problem Contact</h1>
         <div class="line"></div>
         <div class="container">
@@ -108,15 +148,16 @@
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter Name" required>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter Email" required>
-                <label for="number">Contact Number:</label>
-                <input type="text" id="number" name="number" placeholder="Enter Contact Number" required>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+                <label for="Number">Contact number</label>
+                <input for="text" id="number" name="number" placeholder="Enter contact number" required>
                 <label for="problem">Mobile Problem:</label>
-                <input type="text" id="problem" name="problem" placeholder="Enter Mobile Problem" required>
+                <input type="text" id="problem" name="problem" placeholder="Enter mobile problem" required>
                 <label for="address">Address:</label>
-                <input type="text" id="address" name="address" placeholder="Enter Address" required>
+                <input type="text" id="address" name="address" placeholder="Enter address" required>
                 <button type="submit">Submit</button>
             </form>
+
             <div id="form-success" style="display: none; color: green;">
                 Your message has been sent successfully!
             </div>
@@ -129,15 +170,7 @@
     <section class="HELP" id="HELP">
         <h1>Help & Support</h1>
         <div class="line"></div>
-        <h3>If you're facing issues with your mobile device or need help using our services, feel free to reach out to us. Our expert team is available to assist you with any queries or technical support. Contact us through our <a href="#contact">Contact Form</a>, or call us at +91 8750575995. We are here to ensure a smooth and hassle-free experience.</h3>
-        <h2>Visit To Nearest Service Centers :-</h2>
-        <ul>
-            <li><a href="https://www.realme.com/in/support/services">www.realme.service.center.com</a></li>
-            <li><a href="https://support.oppo.com/in/service-center/">www.oppo.service.center.com</a></li>
-            <li><a href="https://www.vivo.com/in/support/service-center">www.vivo.service.center.com</a></li>
-            <li><a href="https://www.mi.com/in/service/repair/?srsltid=AfmBOoobn_xJFDv2Mhi2b4JBlaz-lFmbjBHABC4z5Q05eOCHB3DRpddy">www.mi.service.center.com</a></li>
-        </ul>
+        <p>If you're facing issues with your mobile device or need help using our services, feel free to reach out to us. Our expert team is available to assist you with any queries or technical support. Contact us through our <a href="#contact">Contact Form</a>, or call us at [Your Contact Number]. We are here to ensure a smooth and hassle-free experience.</p>
     </section>
-
 </body>
 </html>

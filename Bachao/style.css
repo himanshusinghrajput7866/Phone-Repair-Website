@@ -1,0 +1,366 @@
+<style>
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+     background-color: rgb(58, 192, 170);
+    height: 60px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 22px;
+    position: sticky;
+    top: 0; /* Navbar ko upar rakhne ke liye */
+    z-index: 1000; /* Navbar ko content ke upar dikhane ke liye */
+    width: 100%;
+    font-size: 40px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-right: 40px;
+    font-size: 1.1rem;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+ul li a:hover {
+    /* border: 2px solid blue; */
+    /* background-color: whitesmoke; */
+    border-radius: 5px;
+    color:blue;
+}
+
+.checkbtn {
+    font-size: 30px;
+    /* color: white; */
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+        order: 1;
+        margin-right: 20px;
+    }
+
+    ul {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background-color: green;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+    }
+
+    ul li {
+        margin: 20px 0;
+    }
+
+    ul li a {
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul {
+        right: 0;
+    }
+}
+
+header {
+    width: auto;
+    height: 108vh;
+    background-image: url("pexels-skitterphoto-1388947.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 50px;
+    /* margin: 20px; */
+}
+
+.header-content {
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.header-content h2 {
+    font-size: 7vmin;
+    color: red;
+}
+
+.line {
+    width: 400px;
+    height: 8px;
+    background: rgb(58, 192, 17);
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.header-content h1 {
+    font-size: 7vmin;
+    margin-top: 300px;
+    margin-bottom: 790px;
+    color: rgb(16, 15, 15);
+    border-radius: 10px;
+    background-color: aqua;
+}
+
+.Btn {
+    padding: 4px 7px;
+    background: rgb(207, 10, 10);
+    font-size: 15px;
+    border-radius: 10px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.Btn:hover {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    color: red;
+}
+
+/* Updated Container Styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container heading styles */
+.container h2 {
+    color: rgb(202, 21, 21);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container h3 {
+    color: rgb(58, 192, 17);
+    text-align: center;
+    padding: 30px 40px;
+    font-size: 30px;
+}
+
+.container h4 {
+    color: rgb(58, 192, 17);
+    text-align: center;
+    padding: 20px 70px;
+    font-size: 20px;
+}
+
+/* Form Styles */
+.container form {
+    display: flex;
+    flex-direction: column;
+    align-items:left;
+}
+
+.container form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.container form input {
+    width: 400%;
+    max-width: 800px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+.container form button {
+    background-color: rgb(58, 192, 170);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container form button:hover {
+    background-color: rgb(45, 155, 127);
+}
+
+.SERVICES {
+    width: auto;
+    height: auto;
+    background-color: azure;
+    text-align: left;
+}
+
+.SERVICES h1 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+
+
+.SERVICES h4 {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px;
+}
+.SERVICES img {
+    max-width: 400px;
+    height: 320px;
+    margin: 20px;
+    padding-right: 40px;
+}
+
+/* Letter Section Styles */
+.letter {
+    width: auto;
+height: auto;
+background-color: azure;
+}
+
+
+.letter h1 {
+    text-align:left;
+}
+
+.letter h3 {
+    padding: 30px 60px;
+    font-size: 30px;
+    color: rgb(58, 192, 17);
+}
+
+.letter h4 {
+    text-align: left;
+}
+
+.letter img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Edit Section Styles */
+.edit {
+    width: auto;
+    height: 700px;
+    background-position: bottom;
+    background-image: url("resumemaker-main.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content:left;
+    
+}
+
+.edit-content {
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: left;
+    
+}
+
+.edit-content h2 {
+    font-size: 7vmin;
+    color: red;
+}
+
+.edit-content h1 {
+    font-size: 8vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: rgb(207, 10, 10);
+}
+
+.Btn {
+    padding: 8px 15px;
+    background: rgb(207, 10, 10);
+    font-size: 15px;
+    border-radius: 30px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.Btn:hover {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    color:blue;
+}
+
+/* Updated Contact Section Styles */
+.contact {
+    width: auto;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid rgb(58, 192, 170);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h1 {
+    text-align: center ;
+    margin-bottom: 20px;
+}
+
+.contact .line {
+    width: 200px;
+    height: 4px;
+    background: rgb(58, 192, 17);
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.contact .us {
+    text-align: center;
+    background: rgb(58, 192, 17);
+
+}
+
+.contact .us h3 {
+    margin: 10px 0;
+
+}
+#btnwith {
+    width:20%;
+}
+
+#fromid {
+    width: 500%;
+}
+
+</style>

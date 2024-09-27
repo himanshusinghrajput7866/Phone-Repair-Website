@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Repair Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <div class="logo">
+            <!-- Logo can be added here -->
+        </div>
+        <ul>
+            <li><a class="active" href="#">HOME</a></li>
+            <li><a href="#about-us">ABOUT US</a></li>
+            <li><a href="#SERVICES">MOBILE SERVICES</a></li>
+            <li><a href="#contact">REPAIR CONTACT</a></li>
+            <li><a href="#CONTACT">CONTACT</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="header-content">
+            <h1>Repair Your Smartphone Now</h1>
+        </div>
+    </header>
+    <section class="about-us" id="about-us">
+        <div class="container">
+            <h2>About us</h2>
+            <div class="line"></div>
+            <h4>Essential Features: Start by designing an engaging home page that highlights your branding and core services. Include detailed service listings with descriptions and pricing, so users know exactly what repairs you offer. Integrate a user-friendly online booking system that allows customers to easily schedule appointments.</h4>
+            <h4>User Engagement Tools: Add a section for customer reviews and testimonials to showcase feedback from past clients. Provide clear contact information, including a phone number, email address, and a contact form. Include a FAQs section to address common questions and help users quickly find answers.</h4>
+            <h4>Design & Security: Ensure the website has a responsive design so it is accessible and user-friendly on both mobile devices and desktops. Implement security features such as an SSL certificate to protect users' personal and payment information. Use effective call-to-action buttons to make it easy for users to book appointments or get in touch with you.</h4>
+        </div>
+    </section>
+
+    <section class="SERVICES" id="SERVICES">
+        <div class="SERVICES">
+            <h1>Mobile Repair</h1>
+            <div class="line"></div>
+            <h4>Great Mobile Repair helps you create a professional and successful repair experience in minutes.</h4>
+            <img src="download (1).jpg" alt="Mobile Repair 1">
+            <img src="download (2).jpg" alt="Mobile Repair 2">
+            <img src="download (3).jpg" alt="Mobile Repair 3">
+            <img src="download.jpeg" alt="Mobile Repair 4">
+            <img src="images/Camerarepair.jpg" alt="Mobile Repair 5">
+            <img src="1.jpg" alt="Mobile Repair 5">
+            <!-- <img src="download (2).jpg" alt="Mobile Repair 6"> -->
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1>Mobile Problem Contact</h1>
+        <div class="line"></div>
+        <div class="container">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Access Key -->
+                <input type="hidden" name="access_key" value="a1fd7d3b-ce65-446d-a46a-13d463841cb0">
+
+                <!-- Form Fields -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+                <label for="problem">Mobile Problem:</label>
+                <input type="text" id="problem" name="problem" placeholder="Enter mobile problem" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter address" required>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Success & Error Message Divs -->
+            <div id="form-success" style="display: none; color: green;">
+                Your message has been sent successfully!
+            </div>
+            <div id="form-error" style="display: none; color: red;">
+                There was an error sending your message. Please try again.
+            </div>
+        </div>
+    </section>
+
+    <section class="CONTACT" id="CONTACT">
+        <div class="contact">
+            <h1>Contact Us</h1>
+            <div class="line"></div>
+            <div class="contact us">
+                <h3>8750575995</h3>
+                <h3>himanshusinghrajput7866@gmaile.com</h3>
+                <h3>B149, Ground Floor, Sector 63, Noida</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for handling form submission -->
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", async function (event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    // Show success message
+                    document.getElementById("form-success").style.display = "block";
+                    document.getElementById("form-error").style.display = "none";
+                    form.reset(); // Reset the form fields
+                } else {
+                    // Show error message
+                    document.getElementById("form-success").style.display = "none";
+                    document.getElementById("form-error").style.display = "block";
+                }
+            } catch (error) {
+                // Show error message in case of network or other issues
+                document.getElementById("form-success").style.display = "none";
+                document.getElementById("form-error").style.display = "block";
+            }
+        });
+    </script>
+
+</body>
+</html>

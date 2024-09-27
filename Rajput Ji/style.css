@@ -8,7 +8,7 @@ body {
 
 nav {
     background-color: rgb(58, 192, 170);
-    height: 58px;
+    height: 45px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -87,10 +87,9 @@ ul li a:hover {
     }
 }
 
-
 header {
     width: 100%; /* Full width */
-    height: 180vh;
+    height: 100vh;
     background-image: url("Premium Vector _ Repairs digital.jpeg");
     background-position: 0px;
     background-size: cover;
@@ -104,87 +103,51 @@ header {
 }
 
 .header-content {
-    margin-bottom: 450px;
+    margin-bottom: 15px;
     color: whitesmoke;
     text-align: center;
 }
 
 .header-content h1 {
     
-    height: 76px;
+    height: 65px;
     font-size: 7vmin;
-    margin-bottom: 500px;
+    margin-bottom: 390px;
     color: rgb(16, 15, 15);
-    border-radius: 20px;
+    border-radius: 25px;
     background-color: aqua;
 }
 
 /* Updated Container Styles */
 .container {
-    width: 100%;
-    max-width: 100%; /* Limit max width for better readability */
+    width: 90%;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.container h3 {
-    text-align: center;
-    font-size: 30px;
-}
-
-.contact1 h1 {
-    font-size: 40px; /* Increased font size for the title */
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #d6a1a1;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-}
 
 .container h2, .container h4 {
     text-align: center;
-    border: solid 2px red;
-    background-color: #28a745;
-    border-radius: 10px;
-    padding: 10px;
 }
 
-.container h5 {
-    font-size: 20px;
-}
-
+/* Form Styles */
 .container form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     font-weight: bold;
-}
-
-.container label {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Adjusted alignment */
-    font-weight: bold;
-    margin-bottom: 6px; /* Added margin for better spacing */
 }
 
 .container form input {
-    width: 100%; /* Make inputs full width */
-    max-width: 1370px; /* Ensure max width */
-    padding: 20px;
+    width: 100%; /* Fix input width to be responsive */
+    max-width: 100%;
+    padding: 10px;
     margin-bottom: 15px;
     border: 2px solid #ddd;
-    border-radius: 9px;
-    transition: border-color 0.4s; /* Smooth transition on focus */
-}
-
-.container form input:focus {
-    border-color: #28a745; /* Change border color on focus */
-    outline: none; /* Remove default outline */
+    border-radius: 4px;
 }
 
 .container form button {
@@ -194,65 +157,55 @@ header {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    width: 150px;
-    height: 55px;
-    margin-top: 10px; /* Added margin for spacing */
+    width: 100px;
+    height: 40px;
+    margin-left: 550px;
 }
 
 .container form button:hover {
     background-color: #218838;
 }
 
-#form-success, #form-error {
-    display: none; /* Hide success/error messages initially */
-    text-align: center; /* Center text */
-    margin-top: 20px; /* Added margin for spacing */
+h1 {
+    text-align: center;
 }
 
-#form-success {
-    color: green;
-}
-
-#form-error {
-    color: red;
+h3 {
+    text-align: center;
+    font-size: 2rem;
 }
 
 .line {
-    width: 150px;
+    width: 50px;
     height: 2px;
     background-color: black;
     margin: 0 auto 20px;
 }
-
-/* Media Queries for Responsiveness */
-@media (max-width: 600px) {
-    .container {
-        padding: 10px; /* Reduced padding on smaller screens */
-    }
+.container h4{
     
-    .container form input {
-        width: 90%; /* Make inputs wider on smaller screens */
-    }
 
-    .container form button {
-        width: 90%; /* Make buttons wider on smaller screens */
-    }
 }
+.line{
 
-.SERVICES h1 {
-    text-align: center;
-    font-size: 45px;  
+}
+Services Section */
+/* /* .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px; */
 }
 
 .service-image {
-    flex: 30%;
+    flex: 1 1 30%;
     margin: 10px;
     position: relative;
     text-align: center;
 }
 
 .service-image img {
-    width: 150%;
+    width: 100%;
     height: auto;
     object-fit: cover; /* Ensures that the image covers the container without stretching */
     border-radius: 10px;
@@ -271,119 +224,5 @@ header {
     }
 }
 nav .logo img {
-    max-height: 70px;
-    margin-bottom: 7px;
-
+    max-height: 83px
 }
-.HELP {
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    justify-content: center; /* Center children vertically */
-    height: 500px; /* Set the height of the section */
-    background: #28a745; /* Background color */
-}
-
-.HELP h1 {
-    color: #ffffff;
-    text-align: center; /* Center the h1 text */
-    font-size: 40px; /* Font size for h1 */
-}
-
-.HELP h3 {
-    color: #ffffff;
-    text-align: center; /* Center the h3 text */
-    font-size: 20px; /* Font size for h3 */
-    width: 80%; /* Set width to 80% for better readability */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-}
-a{
-    font-size: 32px;
-}
-
-    /* Form Styling */
-    #contact-form {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #f9f9f9;
-        border-radius: 10px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    #contact-form label {
-        display: block;
-        margin-bottom: 10px;
-        font-size: 20px;
-        font-weight: bold;
-        text-align: left;
-    }
-
-    #contact-form input[type="text"],
-    #contact-form input[type="email"] {
-        width: 100%; /* Set full width */
-        padding: 19px; /* Increase padding for larger size */
-        font-size: 18px; /* Increase font size */
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-        
-    }
-
-    #contact-form button {
-        width: 20%;
-        padding: 15px;
-        font-size: 18px;
-        background-color: #28a745;
-        color: white;
-        border: none;
-        border-radius: 30px;
-        cursor: pointer;
-    }
-
-    #contact-form button:hover {
-        background-color: #218838;
-    }
-    .services-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .service-image {
-        text-align: center;
-    }
-
-    .service-image img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px;
-    }
-
-    .service-image p {
-        font-size: 16px;
-        font-weight: bold;
-        margin-top: 10px;
-    }
-
-    @media (max-width: 768px) {
-        .services-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 480px) {
-        .services-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-    .logo img{
-          border-radius: 15px;
-    }
