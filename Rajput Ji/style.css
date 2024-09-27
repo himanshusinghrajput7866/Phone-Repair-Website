@@ -1,0 +1,389 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+nav {
+    background-color: rgb(58, 192, 170);
+    height: 58px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 22px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    font-size: 120px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-right: 40px;
+    font-size: 1.1rem;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+ul li a:hover {
+    color: blue;
+}
+
+.checkbtn {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+        order: 1;
+        margin-right: 20px;
+    }
+
+    ul {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background-color: green;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+    }
+
+    ul li {
+        margin: 20px 0;
+    }
+
+    ul li a {
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul {
+        right: 0;
+    }
+}
+
+
+header {
+    width: 100%; /* Full width */
+    height: 180vh;
+    background-image: url("Premium Vector _ Repairs digital.jpeg");
+    background-position: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 50px;
+    /* margin-top: 100px; */
+    
+}
+
+.header-content {
+    margin-bottom: 450px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.header-content h1 {
+    
+    height: 76px;
+    font-size: 7vmin;
+    margin-bottom: 500px;
+    color: rgb(16, 15, 15);
+    border-radius: 20px;
+    background-color: aqua;
+}
+
+/* Updated Container Styles */
+.container {
+    width: 100%;
+    max-width: 100%; /* Limit max width for better readability */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.contact1 h1 {
+    font-size: 40px; /* Increased font size for the title */
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #d6a1a1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.container h2, .container h4 {
+    text-align: center;
+    border: solid 2px red;
+    background-color: #28a745;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.container h5 {
+    font-size: 20px;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+.container label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Adjusted alignment */
+    font-weight: bold;
+    margin-bottom: 6px; /* Added margin for better spacing */
+}
+
+.container form input {
+    width: 100%; /* Make inputs full width */
+    max-width: 1370px; /* Ensure max width */
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 9px;
+    transition: border-color 0.4s; /* Smooth transition on focus */
+}
+
+.container form input:focus {
+    border-color: #28a745; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.container form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 150px;
+    height: 55px;
+    margin-top: 10px; /* Added margin for spacing */
+}
+
+.container form button:hover {
+    background-color: #218838;
+}
+
+#form-success, #form-error {
+    display: none; /* Hide success/error messages initially */
+    text-align: center; /* Center text */
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+#form-success {
+    color: green;
+}
+
+#form-error {
+    color: red;
+}
+
+.line {
+    width: 150px;
+    height: 2px;
+    background-color: black;
+    margin: 0 auto 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Reduced padding on smaller screens */
+    }
+    
+    .container form input {
+        width: 90%; /* Make inputs wider on smaller screens */
+    }
+
+    .container form button {
+        width: 90%; /* Make buttons wider on smaller screens */
+    }
+}
+
+.SERVICES h1 {
+    text-align: center;
+    font-size: 45px;  
+}
+
+.service-image {
+    flex: 30%;
+    margin: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.service-image img {
+    width: 150%;
+    height: auto;
+    object-fit: cover; /* Ensures that the image covers the container without stretching */
+    border-radius: 10px;
+}
+
+.service-image p {
+    font-size: 1.2rem;
+    color: black;
+    margin-top: 10px;
+}
+
+/* Ensure proper spacing for mobile view */
+@media (max-width: 768px) {
+    .service-image {
+        flex: 1 1 100%; /* Full width for smaller screens */
+    }
+}
+nav .logo img {
+    max-height: 70px;
+    margin-bottom: 7px;
+
+}
+.HELP {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    height: 500px; /* Set the height of the section */
+    background: #28a745; /* Background color */
+}
+
+.HELP h1 {
+    color: #ffffff;
+    text-align: center; /* Center the h1 text */
+    font-size: 40px; /* Font size for h1 */
+}
+
+.HELP h3 {
+    color: #ffffff;
+    text-align: center; /* Center the h3 text */
+    font-size: 20px; /* Font size for h3 */
+    width: 80%; /* Set width to 80% for better readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+a{
+    font-size: 32px;
+}
+
+    /* Form Styling */
+    #contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #contact-form label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    #contact-form input[type="text"],
+    #contact-form input[type="email"] {
+        width: 100%; /* Set full width */
+        padding: 19px; /* Increase padding for larger size */
+        font-size: 18px; /* Increase font size */
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        
+    }
+
+    #contact-form button {
+        width: 20%;
+        padding: 15px;
+        font-size: 18px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    #contact-form button:hover {
+        background-color: #218838;
+    }
+    .services-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .service-image {
+        text-align: center;
+    }
+
+    .service-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .service-image p {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .services-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    .logo img{
+          border-radius: 15px;
+    }
